@@ -18,7 +18,7 @@ const ActivityTimeline = ({ events }: { events: ActivityEvent[] }) => {
     >
       <h3 className="text-sm font-medium text-foreground mb-5">Recent Activity</h3>
       <div className="relative">
-        <div className="absolute left-[11px] top-2 bottom-2 w-px bg-white/10" />
+        <div className="absolute left-[11px] top-2 bottom-2 w-px bg-border" />
         <div className="space-y-5">
           {events.map((event, i) => {
             const Icon = iconMap[event.type];
@@ -30,7 +30,7 @@ const ActivityTimeline = ({ events }: { events: ActivityEvent[] }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 * i, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 z-10">
+                <div className="w-6 h-6 rounded-full bg-muted border border-border flex items-center justify-center shrink-0 z-10">
                   <Icon className="w-3 h-3 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
