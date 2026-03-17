@@ -16,7 +16,7 @@ const EmployeeCard = ({ employee, active, onClick }: EmployeeCardProps) => {
       className={`w-full text-left p-4 rounded-xl transition-colors duration-200 ${
         active
           ? "glass-card-active"
-          : "glass-card hover:bg-white/[0.08]"
+          : "glass-card hover:bg-muted/50 dark:hover:bg-white/[0.08]"
       }`}
       whileHover={{ scale: 1.01 }}
       transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
@@ -29,15 +29,15 @@ const EmployeeCard = ({ employee, active, onClick }: EmployeeCardProps) => {
         <span
           className={`text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full border ${
             employee.status === "completed"
-              ? "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
-              : "text-blue-400 bg-blue-500/10 border-blue-500/20"
+              ? "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
+              : "text-primary bg-primary/10 border-primary/20"
           }`}
         >
           {employee.status === "completed" ? "Completed" : "In Progress"}
         </span>
       </div>
 
-      <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+      <div className="w-full h-1 bg-muted rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-primary rounded-full"
           initial={{ width: 0 }}

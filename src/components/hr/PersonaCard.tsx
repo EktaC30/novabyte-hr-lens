@@ -12,7 +12,7 @@ const PersonaCard = ({ employee }: { employee: Employee }) => {
       key={employee.id}
     >
       <div className="flex items-center gap-5">
-        <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+        <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center dark:shadow-[0_0_20px_hsl(var(--primary)/0.15)]">
           <User className="w-7 h-7 text-primary" />
         </div>
         <div>
@@ -24,7 +24,7 @@ const PersonaCard = ({ employee }: { employee: Employee }) => {
         {employee.stack.map((tech) => (
           <span
             key={tech}
-            className="bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-widest text-muted-foreground"
+            className="bg-muted border border-border px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-widest text-muted-foreground"
           >
             {tech}
           </span>

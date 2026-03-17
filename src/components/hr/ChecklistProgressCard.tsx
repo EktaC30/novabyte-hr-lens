@@ -28,9 +28,9 @@ const ChecklistProgressCard = ({ tasks, completed, total }: ChecklistProgressCar
         <span className="text-2xl font-medium text-primary tabular-nums">{progress}%</span>
       </div>
 
-      <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden mb-4">
+      <div className="w-full h-2 bg-muted rounded-full overflow-hidden mb-4">
         <motion.div
-          className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+          className="h-full bg-gradient-to-r from-primary to-primary/70 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
@@ -63,7 +63,7 @@ const ChecklistProgressCard = ({ tasks, completed, total }: ChecklistProgressCar
                     className={`w-5 h-5 rounded-md flex items-center justify-center transition-all ${
                       task.completed
                         ? "bg-primary glow-blue"
-                        : "border border-white/20"
+                        : "border border-border"
                     }`}
                   >
                     {task.completed && <Check className="w-3 h-3 text-primary-foreground" />}
@@ -71,7 +71,7 @@ const ChecklistProgressCard = ({ tasks, completed, total }: ChecklistProgressCar
                   <span className={`text-sm ${task.completed ? "text-foreground" : "text-muted-foreground"}`}>
                     {task.name}
                   </span>
-                  <span className={`text-[10px] uppercase tracking-widest ${task.completed ? "text-primary" : "text-slate-600"}`}>
+                  <span className={`text-[10px] uppercase tracking-widest ${task.completed ? "text-primary" : "text-muted-foreground"}`}>
                     {task.completed ? "Done" : "Pending"}
                   </span>
                 </div>

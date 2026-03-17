@@ -9,8 +9,8 @@ interface EmployeeListPanelProps {
 
 const EmployeeListPanel = ({ employees, selectedId, onSelect }: EmployeeListPanelProps) => {
   return (
-    <aside className="w-96 shrink-0 border-r border-white/5 bg-black/20 backdrop-blur-xl flex flex-col h-screen sticky top-0">
-      <div className="p-6 border-b border-white/5">
+    <aside className="w-96 shrink-0 border-r border-border bg-card/50 dark:bg-black/20 backdrop-blur-xl flex flex-col h-screen sticky top-0">
+      <div className="p-6 border-b border-border">
         <h1 className="text-lg font-semibold text-foreground tracking-tight">NovaByte HR</h1>
         <p className="text-label mt-1">Onboarding Intelligence</p>
       </div>
