@@ -1,5 +1,7 @@
 import { Employee } from "@/data/mockEmployees";
 import EmployeeCard from "./EmployeeCard";
+import { useNavigate } from "react-router-dom";
+import { BarChart3 } from "lucide-react";
 
 interface EmployeeListPanelProps {
   employees: Employee[];
@@ -8,6 +10,8 @@ interface EmployeeListPanelProps {
 }
 
 const EmployeeListPanel = ({ employees, selectedId, onSelect }: EmployeeListPanelProps) => {
+  const navigate = useNavigate();
+
   return (
     <aside className="w-96 shrink-0 border-r border-border bg-card/50 dark:bg-black/20 backdrop-blur-xl flex flex-col h-screen sticky top-0">
       <div className="p-6 border-b border-border">
