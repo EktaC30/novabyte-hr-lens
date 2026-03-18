@@ -28,6 +28,15 @@ const EmployeeListPanel = ({ employees, selectedId, onSelect }: EmployeeListPane
           />
         ))}
       </div>
+      <div className="p-4 border-t border-border">
+        <button
+          onClick={() => navigate("/analytics")}
+          className="w-full flex items-center justify-center gap-2 text-xs px-3 py-2.5 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/15 transition-all duration-200"
+        >
+          <BarChart3 className="w-3.5 h-3.5" />
+          Onboarding Analytics
+        </button>
+      </div>
     </aside>
   );
 };
